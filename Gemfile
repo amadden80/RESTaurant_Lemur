@@ -3,10 +3,13 @@ source 'https://rubygems.org'
 #Framework
 gem 'sinatra'
 
+#Database
+gem 'sinatra-activerecord'
+gem 'pg'
+
 #Utility
+gem 'rake'
 gem 'json'
 
 #Debugging
-group :development do
-  gem 'pry'
-end
+gem 'pry'
