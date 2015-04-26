@@ -17,16 +17,14 @@ require './models/user'
 
 
 namespace :db do
+
   desc "Create Admin User"
   task :create_user do
     user = User.new({username: 'steve'})
     user.password='qwer1234'
     user.save!
   end
-end
 
-
-namespace :db do
   desc "Fill Database some Junk Data"
   task :junk_data do
 
@@ -68,4 +66,5 @@ namespace :db do
     Food.destroy_all
     Party.destroy_all
   end # task :empty
-end
+
+end # namespace :db

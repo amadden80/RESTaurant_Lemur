@@ -1,5 +1,4 @@
 class WelcomeController < Sinatra::Base
-
   enable  :sessions
   helpers Sinatra::SessionHelper
 

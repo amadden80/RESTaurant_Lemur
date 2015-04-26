@@ -1,3 +1,8 @@
+-- -- If running the tests...
+-- --   ... also perform migratins for the test database
+-- CREATE DATABASE restaurant_pos_test;
+-- \c restaurant_pos_test
+
 CREATE DATABASE restaurant_pos;
 \c restaurant_pos
 
