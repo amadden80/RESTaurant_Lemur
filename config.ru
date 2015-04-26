@@ -8,6 +8,7 @@ ActiveRecord::Base.establish_connection(
   :database => 'restaurant_pos'
 )
 
+
 # ***** MODELS *****
 require './models/party'
 require './models/food'
@@ -15,8 +16,9 @@ require './models/order'
 
 # ***** CONTROLLERS *****
 require './controllers/foods_controller'
-require './controllers/party_controller'
+require './controllers/parties_controller'
 require './controllers/welcome_controller'
+require './controllers/orders_controller'
 
 
 # ***** ROUTING *****
