@@ -19,3 +19,10 @@ CREATE TABLE orders (
   party_id INTEGER,
   food_id INTEGER
 );
+
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255),
+  password_hash VARCHAR(255)
+);

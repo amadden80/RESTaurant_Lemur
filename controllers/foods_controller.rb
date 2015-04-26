@@ -1,5 +1,6 @@
 class FoodsController < Sinatra::Base
   enable  :sessions
+  helpers Sinatra::SessionHelper
 
   # ***** Helpers *****
   def food_params
@@ -30,12 +31,14 @@ class FoodsController < Sinatra::Base
   end
 
   post '/' do
+    authenticate_api!
     food = Food.create(food_params)
     content_type :json
     food.to_json
   end
 
   patch '/:id' do
+    authenticate_api!
     food = Food.find(params[:id])
     food.update(food_params)
     content_type :json
@@ -43,6 +46,7 @@ class FoodsController < Sinatra::Base
   end
 
   put '/:id' do
+    authenticate_api!
     food = Food.find(params[:id])
     food.update(food_params)
     content_type :json
@@ -50,6 +54,7 @@ class FoodsController < Sinatra::Base
   end
 
   delete '/:id' do
+    authenticate_api!
      Food.destroy(params[:id])
      content_type :json
      {success: "ok"}.to_json

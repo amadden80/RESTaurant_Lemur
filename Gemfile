@@ -7,6 +7,9 @@ gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'pg'
 
+#Password Encryption
+gem 'bcrypt'
+
 #Utility
 gem 'json'
 gem 'rake'

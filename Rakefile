@@ -12,6 +12,18 @@ ActiveRecord::Base.establish_connection(
 require './models/party'
 require './models/food'
 require './models/order'
+require './models/user'
+
+
+
+namespace :db do
+  desc "Create Admin User"
+  task :create_user do
+    user = User.new({username: 'steve'})
+    user.password='qwer1234'
+    user.save!
+  end
+end
 
 
 namespace :db do
