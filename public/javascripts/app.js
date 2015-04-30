@@ -23,10 +23,8 @@ $(document).ready(function(){
     el: $('#party-list'),
   });
 
-
   app.parties.fetch();
   app.foods.fetch();
-
 
   // This is just ONE way to do this....  there are many others....
   $('#place-order').on('click', function(){  // Creating an event listener

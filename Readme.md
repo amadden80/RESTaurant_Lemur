@@ -8,6 +8,8 @@
 
 ```
 
+###RESTaurant:
+- A restaurant POS system for taking your orders...
 
 
-![Entity Relationship Diagram](/ERD.png)
+![Screen Shot](/screenshot.png)
